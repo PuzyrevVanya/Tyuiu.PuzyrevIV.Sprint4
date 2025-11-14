@@ -1,11 +1,25 @@
-﻿namespace Tyuiu.PuzyrevIV.Sprint4.Task1.V17.Test
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+
+using Tyuiu.PuzyrevIV.Sprint4.Task2.V17.Lib;
+
+namespace Tyuiu.PuzyrevIV.Sprint4.Task2.V17.Test
 {
     [TestClass]
-    public sealed class Test1
+    public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidCalculateMethod()
         {
+            DataService ds = new DataService();
+
+            int[] numsArray = { 3, 4, 5, 6, 7, 8, 9, 3, 5 };
+
+            int wait = 14175;
+
+            int res = ds.Calculate(numsArray);
+
+            Assert.AreEqual(wait, res);
         }
     }
 }
